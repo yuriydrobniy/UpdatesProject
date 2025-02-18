@@ -1,17 +1,16 @@
 {
   "name": "UpdatesProject",
   "displayName": "UpdatesProject",
-  "expo": {
-    "extra": {
-      "eas": {
-        "projectId": "d7d29044-8960-4a7a-83b9-f6b28f9420dc"
-      }
-    },
-    "runtimeVersion": "1.0.0",
-    "android": {},
-    "ios": {},
-    "updates": {
-      "url": "http://localhost:3000/api/manifest"
+  "extra": {
+    "eas": {
+      "projectId": "d7d29044-8960-4a7a-83b9-f6b28f9420dc"
     }
+  },
+  "jsEngine": "hermes",
+  "runtimeVersion": "1.0.0",
+  "android": {},
+  "ios": {},
+  "updates": {
+    "url": "http://localhost:3000/api/manifest"
   }
 }

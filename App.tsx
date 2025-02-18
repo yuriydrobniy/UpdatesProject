@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import * as Updates from 'expo-updates';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -76,6 +77,13 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Text>
+            {[
+              Updates.channel,
+              Updates.isEmbeddedLaunch,
+              Updates.runtimeVersion,
+            ].join(' | ')}
+          </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
