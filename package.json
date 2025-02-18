@@ -4,10 +4,18 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "lint": "eslint .",
+    "ios": "react-native run-ios --udid '7E0A5138-BCB3-4CAC-9857-B5187897B834'",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "adb-reverse": "adb reverse tcp:8081 tcp:8081",
+    "sim": "open -a Simulator.app",
+    "clean": "watchman watch-del-all & yarn cache clean",
+    "link-asset": "npx react-native-asset",
+    "android:release": "react-native run-android --mode release",
+    "ios:release": "react-native run-ios --configuration release",
+    "ios:no-flipper": "NO_FLIPPER=1 bundle exec pod install --project-directory=ios",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "react": "18.2.0",
