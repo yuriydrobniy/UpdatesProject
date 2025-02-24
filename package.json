@@ -15,9 +15,12 @@
     "android:release": "react-native run-android --mode release",
     "ios:release": "react-native run-ios --configuration release",
     "ios:no-flipper": "NO_FLIPPER=1 bundle exec pod install --project-directory=ios",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "hp-deploy:android": "yarn hot-updater deploy -p 'android'",
+    "hp-deploy:ios": "yarn hot-updater deploy -p 'ios'"
   },
   "dependencies": {
+    "@hot-updater/react-native": "0.10.2",
     "patch-package": "^8.0.0",
     "react": "18.2.0",
     "react-native": "0.73.6"
@@ -26,6 +29,8 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@hot-updater/metro": "0.10.2",
+    "@hot-updater/supabase": "0.10.2",
     "@react-native/babel-preset": "0.73.21",
     "@react-native/eslint-config": "0.73.2",
     "@react-native/metro-config": "0.73.5",
@@ -33,9 +38,13 @@
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
+    "dotenv": "^16.4.7",
     "eslint": "^8.19.0",
+    "hot-updater": "^0.10.2",
     "jest": "^29.6.3",
+    "path": "^0.12.7",
     "prettier": "2.8.8",
+    "react-native-dotenv": "^3.4.11",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
